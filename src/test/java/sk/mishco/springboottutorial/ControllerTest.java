@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-public class ControllerTest {
+class ControllerTest {
 
     @Test
-    public void nothing() {
+    void nothing() {
         assertTrue(true);
     }
 }
