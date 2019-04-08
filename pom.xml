@@ -70,12 +70,6 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.2</version>
-                <configuration>
-                    <excludes>
-<!--                        <exclude>sk/mishco/jblogger/entities/*</exclude>-->
-<!--                        <exclude>sk/mishco/jblogger/*Application</exclude>-->
-                    </excludes>
-                </configuration>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
@@ -127,6 +121,19 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.6.0.1398</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sonar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
