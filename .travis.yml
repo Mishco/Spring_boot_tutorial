@@ -5,7 +5,7 @@ jdk:
 # would just use default install/script but the ./mvnw script errors on travis
 # obviously this only works for maven builds right now...
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -Dsonar.skip=true
 
 services:
   - docker
@@ -17,6 +17,6 @@ addons:
       secure: $SONAR_TOKEN
 
 script:
-  - mvn test
+  - mvn test -Dsonar.skip=true
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io
 
