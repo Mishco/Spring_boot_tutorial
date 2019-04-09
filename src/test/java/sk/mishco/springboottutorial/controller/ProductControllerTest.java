@@ -30,7 +30,7 @@ class ProductControllerTest {
         Product newProduct = new Product(100L, "Rozok");
         Product product = productRepository.save(newProduct);
 
-        assertEquals(newProduct, product);
+        assertEquals(newProduct.getId(), product.getId());
     }
 
     @Test
