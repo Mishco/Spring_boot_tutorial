@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import sk.mishco.springboottutorial.model.Product;
+import sk.mishco.springboottutorial.model.ProductDTO;
 import sk.mishco.springboottutorial.services.IProductService;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class ProductController {
     }
 
     @PostMapping(value = "/products")
-    public ResponseEntity<Object> createProduct(@RequestBody Product product) {
+    public ResponseEntity<Object> createProduct(@RequestBody ProductDTO product) {
         productService.put(product);
         return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
     }
@@ -37,7 +38,7 @@ public class ProductController {
     }
 
     @PutMapping(value = "/products/{id}")
-    public ResponseEntity<Object> updateProduct(@PathVariable("id") Long id, @RequestBody Product product) {
+    public ResponseEntity<Object> updateProduct(@PathVariable("id") Long id, @RequestBody ProductDTO product) {
         productService.remove(productService.getProductById(id));
         product.setId(id);
         productService.put(product);

@@ -1,15 +1,16 @@
 package sk.mishco.springboottutorial.services;
 
 import sk.mishco.springboottutorial.model.Product;
+import sk.mishco.springboottutorial.model.ProductDTO;
 
 import java.util.List;
 
 public interface IProductService {
     List<Product> getProducts();
 
-    Product getProductById(Long id);
+    ProductDTO getProductById(Long id);
 
-    Product put(Product product);
+    Product put(ProductDTO product);
 
-    void remove(Product product);
+    void remove(ProductDTO product);
 }
