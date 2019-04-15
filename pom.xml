@@ -14,7 +14,7 @@
     <description>Demo project for Spring Boot</description>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/Spring_boot_tutorial</developerConnection>
+        <developerConnection>scm:git:https://github.com/Mishco/Spring_boot_tutorial</developerConnection>
       <tag>spring-boot-tutorial-0.0.2</tag>
   </scm>
     <properties>
