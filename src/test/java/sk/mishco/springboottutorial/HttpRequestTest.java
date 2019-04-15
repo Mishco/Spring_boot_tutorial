@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import sk.mishco.springboottutorial.services.GreetingService;
-import sk.mishco.springboottutorial.services.ProductService;
+import sk.mishco.springboottutorial.services.ProductServiceImpl;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ class HttpRequestTest {
     private GreetingService greetingService;
 
     @Autowired
-    private ProductService productService;
+    private ProductServiceImpl productService;
 
     @Test
     void greetingShouldReturnDefaultMessage() {

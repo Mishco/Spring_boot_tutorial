@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import sk.mishco.springboottutorial.model.Product;
 import sk.mishco.springboottutorial.model.ProductDTO;
-import sk.mishco.springboottutorial.services.IProductService;
+import sk.mishco.springboottutorial.services.ProductService;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import java.util.List;
 public class ProductController {
 
 
-    private IProductService productService;
+    private ProductService productService;
 
-    public ProductController(IProductService productService) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
     }
 

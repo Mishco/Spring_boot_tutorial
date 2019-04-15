@@ -27,7 +27,7 @@ class ProductServiceControllerTest {
 
     @Autowired
     private ProductRepository productRepository;
-    private ProductService productService;
+    private ProductServiceImpl productService;
     private ProductDTO productDTO;
 
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -38,7 +38,7 @@ class ProductServiceControllerTest {
         productDTO = new ProductDTO();
         productDTO.setId(10L);
         productDTO.setName("testObject");
-        productService = new ProductService(productRepository);
+        productService = new ProductServiceImpl(productRepository);
     }
 
     @Test
