@@ -56,7 +56,7 @@ class ProductServiceControllerTest {
 
 
         String jsonStr = objectMapper.writeValueAsString(productDTO);
-
+        String resStr = "Product is created successfully";
         MvcResult result = this.mockMvc.perform(
                 post("/products")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -65,13 +65,14 @@ class ProductServiceControllerTest {
                 .andDo(print())
                 .andExpect(status().is2xxSuccessful()).andReturn();
 
-        assertEquals(result.getResponse().getContentAsString(), "Product is created successfully");
+        assertEquals(resStr, result.getResponse().getContentAsString());
     }
 
 
     @Test
     void deleteProductTest() throws Exception {
         long id = 10L;
+        String resStr = "Product is deleted successfully";
         productService.put(productDTO);
 
         MvcResult result = this.mockMvc.perform(
@@ -79,12 +80,13 @@ class ProductServiceControllerTest {
                 .andDo(print())
                 .andExpect(status().is2xxSuccessful()).andReturn();
 
-        assertEquals(result.getResponse().getContentAsString(), "Product is deleted successfully");
+        assertEquals(resStr, result.getResponse().getContentAsString());
     }
 
     @Test
     void updateProductTest() throws Exception {
         long id = 10L;
+        String resStr = "Product is updated successfully";
         productService.put(productDTO);
 
         String jsonStr = objectMapper.writeValueAsString(productDTO);
@@ -96,7 +98,7 @@ class ProductServiceControllerTest {
         )
                 .andDo(print())
                 .andExpect(status().is2xxSuccessful()).andReturn();
-        assertEquals(result.getResponse().getContentAsString(), "Product is updated successfully");
+        assertEquals(resStr, result.getResponse().getContentAsString());
 
     }
 }

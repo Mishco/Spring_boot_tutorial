@@ -7,7 +7,6 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {

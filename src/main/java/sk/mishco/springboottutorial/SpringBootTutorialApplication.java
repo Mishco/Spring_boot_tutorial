@@ -14,5 +14,4 @@ public class SpringBootTutorialApplication {
         LOGGER.info(VersionChecker.getSpringVersion());
         LOGGER.info(VersionChecker.getSpringBootVersion());
     }
-
 }
