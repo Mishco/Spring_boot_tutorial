@@ -34,3 +34,27 @@ Run the tests
 ```bash
 mvn clean test
 ```
+
+## Run with Docker
+
+1. First build the project with maven.
+ 
+2. Build the docker image:
+
+```bash
+docker build -t springboottutorial .
+```
+
+or
+
+```bash
+docker build --build-arg JAR_FILE=target/*.jar -t springbootutorial . 
+```
+
+3. Run Docker container with specific port:
+
+```bash
+docker run -p 8080:8080 springbootutorial
+``` 
+
+
