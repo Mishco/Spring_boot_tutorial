@@ -1,3 +1,5 @@
+# Spring boot tutorial
+
 [![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](#)
 [![Build Status](https://travis-ci.org/Mishco/Spring_boot_tutorial.svg?branch=master)](https://travis-ci.org/Mishco/Spring_boot_tutorial)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=sk.mishco%3Aspring-boot-tutorial&metric=alert_status)](https://sonarcloud.io/dashboard/index/sk.mishco:spring-boot-tutorial)
@@ -6,20 +8,29 @@
 [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=sk.mishco%3Aspring-boot-tutorial&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=sk.mishco%3Aspring-boot-tutorial)
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sk.mishco%3Aspring-boot-tutorial&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=sk.mishco%3Aspring-boot-tutorial)
 
-
-# Spring boot tutorial
-
-
 ## Technology stack
 
-* Spring version 2.1.4.RELEASE
-* Java 1.8
+* Spring version 2.2.6.RELEASE
+* [Java 14](https://adoptopenjdk.net/installation.html#)
 * Maven
+* Junit 5 
 
 ## Description
 
-## Example code
+Simple code for latest Spring Boot and Java, plus integration and junit tests. 
+Included Jacoco and SonarCloud for code quality.
 
 ## How to run it
 
-## Source
+Run the project
+
+```bash
+mvn clean package
+mvn spring-boot:run
+```
+
+Run the tests
+
+```bash
+mvn clean test
+```
